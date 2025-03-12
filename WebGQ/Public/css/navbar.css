@@ -1,0 +1,191 @@
+/* 🌟 Navbar optimizado */
+.navbar {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.9) 100%);
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 📌 Menú de navegación */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* 📌 Estilos de los enlaces del menú */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85) !important;
+    padding: 8px 14px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* 🔄 Línea animada solo bajo el texto */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* 🖱️ Hover: línea solo bajo el texto */
+.navbar-nav .nav-link:hover::after {
+    width: 60%;
+}
+
+/* 📌 Redes Sociales */
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar-icons a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-left: 12px;
+    transition: all 0.2s ease;
+}
+
+.navbar-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* 🔍 Contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* 🔍 Botón de búsqueda */
+.btn-search-toggle {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-search-toggle:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 🔍 Estilos de la barra de búsqueda */
+.search-form {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 220px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* 🔄 Cuando la barra está activa, se expande hacia abajo */
+.search-form.active {
+    height: 40px;
+    opacity: 1;
+}
+
+/* 📌 Estilos del campo de texto */
+.search-form input {
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+/* Placeholder con color tenue */
+.search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 📱 Ajustes para móviles */
+@media (max-width: 768px) {
+    .search-container {
+        position: absolute;
+        top: 10px;
+        right: 55px; /* Ajuste de posición */
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-search-toggle {
+        font-size: 1.5rem;
+        color: white !important;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* 🔽 Ajuste del buscador desplegable en móviles */
+    .search-form {
+        position: absolute;
+        top: 60px; /* 🔹 Ahora se abrirá debajo del navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        display: none;
+        padding: 10px;
+    }
+
+    .search-form.active {
+        display: flex;
+    }
+
+
+    /* 🍔 Menú hamburguesa corregido */
+    .navbar-toggler {
+        border: 2px solid white !important;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 8px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Hacer las líneas del menú hamburguesa blancas */
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Efecto hover para que destaque más */
+    .navbar-toggler:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+

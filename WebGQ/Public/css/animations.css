@@ -1,0 +1,45 @@
+/* 🌟 Animaciones del Hero */
+
+/* 🔥 Efecto Glow en los faros */
+@keyframes glow {
+    0% { filter: brightness(1.5); }
+    50% { filter: brightness(2.3); }
+    100% { filter: brightness(1.5); }
+}
+
+/* Aplicamos la animación de brillo solo a la imagen */
+.hero-image {
+    animation: glow 3s infinite alternate ease-in-out;
+}
+
+
+/* 🎬 Desenfoque Inicial al cargar */
+@keyframes fadeBlur {
+    0% { filter: blur(10px); opacity: 0; transform: scale(1.05); }
+    100% { filter: blur(0); opacity: 1; transform: scale(1); }
+}
+
+.hero-image {
+    animation: fadeBlur 1.5s ease-out forwards;
+}
+
+/* 🔄 Efecto Parallax Mejorado */
+@media (min-width: 1024px) {
+    .hero-image {
+        transform: translateY(0);
+        transition: transform 0.4s ease-in-out;
+    }
+    .hero-section:hover .hero-image {
+        transform: translateY(-5px);
+    }
+}
+
+/* ✨ Efecto en Botones */
+.btn-custom {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .expomovil-image {
+        max-width: 80%;
+    }
+}

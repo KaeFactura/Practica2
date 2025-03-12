@@ -1,0 +1,17 @@
+.expomovil-section {
+    text-align: center;
+    padding: 60px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expomovil-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+}

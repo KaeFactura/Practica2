@@ -1,0 +1,15 @@
+.hero-content h1 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: none;
+    text-shadow: none;
+    margin-bottom: 15px;
+    color: white !important; /* Asegura que el texto sea blanco */
+}
+
+.hero-content p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8) !important; /* Ajusta el contraste */
+}

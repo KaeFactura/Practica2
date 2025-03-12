@@ -1,0 +1,62 @@
+/* 🎨 Botones con tamaño uniforme y diseño refinado */
+.btn-custom {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 22px; /* Reducido un poco */
+    border-radius: 6px;
+    background: white;
+    color: black;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 180px; /* Ajuste de tamaño */
+    height: 45px;
+}
+
+/* 🔄 Hover: inversión de colores con efecto elegante */
+.btn-custom:hover {
+    background: black;
+    color: white;
+    border-color: white;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* 🔲 Botón con solo borde (outline) */
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* 🔄 Hover: inversión de colores en el botón de borde */
+.btn-outline:hover {
+    background: white;
+    color: black;
+    border-color: white;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* 📌 Contenedor de los botones */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado reducido */
+    margin-top: 15px;
+}
+
+/* 📱 Responsivo: los botones se apilan verticalmente en pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-custom {
+        width: 100%;
+    }
+}
